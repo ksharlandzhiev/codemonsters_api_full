@@ -62,12 +62,12 @@ $ bundle exec rake db:schema:load
 $ bundle exec rails s -p 3001
 ```
 
-### Minutes per module
+### Structure
 
 1. PaymentTransactionsController
-   1. expalin routes.rb
-   2. strong params
-   3. make 'create' action
+   1. uses routes.rb
+   2. uses strong params
+   3. 'create' action
 
 2. PaymentTransaction model
    1.  factory! method
