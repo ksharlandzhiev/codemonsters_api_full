@@ -17,17 +17,17 @@ Real world Void transactions can be triggered only on the same day the correspon
 
 ### Ubuntu set up
 
-* Update ubuntu -> 5 minutes
+* Update ubuntu
 ```
 sudo apt-get update
 ```
 
-* Install required dependencies -> 3 min
+* Install required dependencies
 ```
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 ```
 
-* install [RVM](https://rvm.io/rvm/install) -> 10 minutes
+* install [RVM](https://rvm.io/rvm/install)
 [Ruby](http://ruby-doc.org/)
 [Rails](http://guides.rubyonrails.org/)
 
@@ -42,7 +42,7 @@ ruby -v
 gem install bundler
 ```
 
-* Configure Git -> 2 min **optional**
+* Configure Git **optional**
 ```
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
@@ -57,25 +57,25 @@ ssh -T git@github.com
 * Clone the repository and issue the following commands:
 ```
 $ bundle install
-$ bundel exec rake db:create:all
+$ bundle exec rake db:create:all
 $ bundle exec rake db:schema:load
 $ bundle exec rails s -p 3001
 ```
 
-### Minutes per module
+### Structure
 
-1. PaymentTransactionsController -> 15/20 minutes
-   1. expalin routes.rb - 2 min 
-   2. strong params
-   3. make 'create' action - 15 min
+1. PaymentTransactionsController
+   1. uses routes.rb
+   2. uses strong params
+   3. 'create' action
 
-2. PaymentTransaction model -> 25/30 minutes
-   1.  factory! method - 10 min
-   2.  process! - 10 min
+2. PaymentTransaction model
+   1.  factory! method
+   2.  process!
 
-3. Gateway model -> 15/25 minutes
-   1. process method - 5 min
-   2. process_transaction method - 15
+3. Gateway model
+   1. process method
+   2. process_transaction method
 
 ### Authentication
 
